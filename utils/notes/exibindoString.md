@@ -56,28 +56,3 @@ ReactDOM.render(
 
 * Padronizar o nome dos arquivos de estilo para o mesmo nome do arquivo de código (.js, .jsx);
 * Para usarmos arquivos de estilo, precisamos importar o arquivo *.css* no nosso arquivo de entrada da aplicação *index.js*;
-
-
-# PRIMEIRO COMPONENTE REACT
-
-* Criar uma pasta em ```./src/``` chamada *components* para inserirmos nossos componentes;
-* Após criar nosso componente no diretório indicado, podemos usá-lo importando nosso componente no arquivo *./src/index.js*;
-* Para utilizar o componente, usamos o nome do import do componente como se fosse uma "tag" HTML;
-* No arquivo do componente, precisamos exportar a função como *default* ```export default function()```;
-* Quando usamos o *export default*, o nome da função do componente não necessariamente precisa ser o mesmo nome do import no *index.js*;
-
-```javascript
-import ReactDOM from 'react-dom' // Biblioteca React para manipulação da DOM
-import React from 'react' // Biblioteca para usarmos código JSX
-import './index.css' // Arquivo de estilo
-
-import First from './components/basics/FirstComponent' // Importando o componente React
-
-const element = document.getElementById('root')
-
-ReactDOM.render(
-    <div>
-        <First></First> // Renderizando nosso componente
-    </div>, element
-)
-```
