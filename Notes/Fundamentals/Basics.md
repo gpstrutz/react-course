@@ -65,6 +65,9 @@ ReactDOM.render(
 * Os componentes serão utilizados no arquivo **index.js** do nosso projeto. Para usar o componente, referenciamos ele como uma *tag html*:
 
 ```javascript
+
+/* Index.js */
+
 import { React } from "react";
 import ReactDOM from "react-dom";
 
@@ -82,4 +85,27 @@ ReactDOM.render(
   element
 );
 
+
+/* Component.js */
+
+export default First() {
+  return 'Hello ReactJS'
+}
+
 ```
+* É comum utilizarmos *expressões* quando queremos adicionar tags ao retorno do nosso componente:
+
+```javascript
+import React from "react"
+
+export default function First() {
+    return (
+        <div>
+            <h2>First Component with JSX</h2>
+        </div>
+    )
+}
+
+```
+
+## Componentes com Propriedades
