@@ -6,7 +6,7 @@ export default function First() {
 
     return (
         <div>
-            <h2>First Component</h2>
+            <h1>First Component</h1>
             <p>{ subtitle }</p>
         </div>
     )
