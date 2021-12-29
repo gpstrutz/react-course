@@ -109,3 +109,67 @@ export default function First() {
 ```
 
 ## Componentes com Propriedades
+
+* Por padrão, componentes React são funções Javascript. Com isso, podemos passar parâmetros para nossos componentes para renderizar eles na nossa aplicação;
+* Os parâmetros dos componentes são chamados de **props**. Eles são parâmetros de objeto que recebe as propriedades dos nossos componentes:
+
+```javascript
+
+/* Component.js */
+
+export default Welcome(props) {
+  return (
+    <h1>Hello, { props.name }</h1>
+  )
+}
+
+/* Index.js */
+
+const element = document.getElementById("root");
+
+ReactDOM.render(
+  <div>
+    <Welcome name="Giovanni" />
+  </div>,
+  element
+);
+
+```
+* A propriedade do nosso componente será passada como argumento no momento em que o componente for instanciado;
+* Para passar valores numéricos para *props*, devemos usar **{ }**;
+* As *props* são somente **read Only**, ou seja, não podem ser alteradas pelo componente;
+
+
+
+## React Fragment
+
+* No *ReactJS*, não podemos renderizar multiplos elementos no mesmo nível;
+* Usamos os *Fragments* quando quisermos renderizar componentes adjacentes e que não estejam envolvidos por uma ```<div>``` ou algum outro elemento;
+* Usado para melhor performance do HTML e para evitar ```<div>```s desnecessárias;
+* Para resolver esse problema, devemos usar o **React Fragments**:
+
+```javascript
+import React from "react";
+
+export default function Fragments( props ) {
+    return (
+        <React.Fragment>
+            <h2>React Fragments</h2>
+            <p>Using React Fragments</p>
+        </React.Fragment>
+    )
+}
+
+// Or...
+
+import React from "react";
+
+export default function Fragments( props ) {
+    return (
+        <>
+          <h2>React Fragments</h2>
+          <p>Using React Fragments</p>
+        </>
+    )
+}
+```
