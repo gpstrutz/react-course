@@ -6,7 +6,6 @@ export default (props) => {
 
   return (
     <div id="random-number-challenge">
-      <h1>Random Number - Challenge</h1>
       <p>Min Value: { min }</p>
       <p>Max Value: { max }</p>
       <p>
