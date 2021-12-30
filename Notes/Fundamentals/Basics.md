@@ -56,6 +56,7 @@ ReactDOM.render(
 ## Carregando CSS
 
 * Por padrão, criamos um arquivo **.css** com o mesmo nome do arquivo **.js**;
+* Arquivo **.css** na raiz do projeto, controla o estilo da apliacação geral.
 
 
 ## Primeiro Componente ReactJS
@@ -173,3 +174,67 @@ export default function Fragments( props ) {
     )
 }
 ```
+* Para aplicarmos uma *classe CSS* em um componente, precisamos:
+  * 1. Criar um arquivo de estilo para o componente (*.css*);
+  * 2. No nosso componente, utilizar a propriedade **className** em nossa tag. O arquivo CSS precisa ter uma classe criada com o mesmo nome:
+
+```css
+/* Style.css */
+
+.Card {
+    background-color: red;
+} 
+```
+```javascript
+/* Component.jsx */
+
+import React from "react";
+import './Card.css';
+
+export default ( props ) => {
+  return (
+    <div className="Card">
+      <div>Content</div>
+      <div>{ props.title }</div>
+    </div>
+  );
+};
+
+```
+
+## Props - Children
+
+* Usado para quando quisermos renderizar um componente dentro de outro componente:
+
+```javascript
+
+/* Index.jsx */
+
+export default () => {
+  return (
+    <div id="fundamentals-react">
+      <h1>Fundamentals React</h1>
+      <Card title="Random Challenge">
+        <Random min={ 1 } max={ 100 } />
+      </Card>
+    </div>
+  );
+};
+
+
+/* Component.jsx */
+
+import React from "react";
+import './Card.css';
+
+export default ( props ) => {
+  return (
+    <div className="Card">
+      <div className="Title">{ props.title }</div>
+      <div className="Content">{ props.children }</div>
+    </div>
+  );
+};
+
+```
+* Para acessar o conteúdo do componente filho, usamos o método ***props.children*** 
