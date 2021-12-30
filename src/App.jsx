@@ -4,6 +4,9 @@ import First from "./components/fundamentals/BasicComponent";
 import Greeting from "./components/fundamentals/WithParameters";
 import Fragments from "./components/fundamentals/Fragments";
 
+// Challenge #1
+import Random from './components/fundamentals/Random';
+
 import './index.css'
 
 // export default function App() {
@@ -26,6 +29,7 @@ export default () => {
       <First />
       <Greeting firstName="Giovanni" lastName="Strutz" age={24} />
       <Fragments />
+      <Random min={ 2 } max={ 100 } />
     </div>
   );
 };
