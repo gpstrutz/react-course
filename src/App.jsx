@@ -8,7 +8,7 @@ import Card from './components/layout/Card';
 // Challenge #1
 import Random from './components/fundamentals/Random';
 
-import './index.css'
+import './App.css';
 
 // export default function App() {
 //     return (
@@ -25,23 +25,28 @@ import './index.css'
 
 export default () => {
   return (
-    <div id="fundamentals-react">
-      <h1>Fundamentals React</h1>
-      <Card title="First Component">
-        <First />
-      </Card>
+    <div className="fundamentals-react">
+      <h1>
+        <strong>Fundamentals React</strong>
+      </h1>
 
-      <Card title="Component With Parameters">
-        <Greeting firstName="Giovanni" lastName="Strutz" age={24} />
-      </Card>
+      <div className="Cards">
+        <Card title="First Component">
+          <First />
+        </Card>
 
-      <Card title="Using React Fragments">
-        <Fragments />
-      </Card>
+        <Card title="Component With Parameters">
+          <Greeting firstName="Giovanni" lastName="Strutz" age={24} />
+        </Card>
 
-      <Card title="Random Challenge">
-        <Random min={1} max={100} />
-      </Card>
+        <Card title="Using React Fragments">
+          <Fragments />
+        </Card>
+
+        <Card title="Random Challenge">
+          <Random min={1} max={100} />
+        </Card>
+      </div>
     </div>
   );
 };

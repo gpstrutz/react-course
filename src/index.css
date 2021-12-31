@@ -1,6 +1,6 @@
 body {
     font-family: Roboto Mono;
-    background-color: #222;
+    background-color: sandybrown;
     color: white;
     text-align: center;
 }
@@ -10,5 +10,5 @@ h1, h2, h3 {
 }
 
 h2, h3 {
-    margin: 0%;
+    margin: 0;
 }
